@@ -1,0 +1,95 @@
+.container {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .basic-button {
+    background-color: #27ae60;
+    color: #fff;
+  }
+  
+  .basic-button:hover {
+    background-color: #219653;
+  }
+  
+  .advanced-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #444 0%, #888 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .advanced-button:hover {
+    background-image: linear-gradient(to right, #888 0%, #ccc 100%);
+  }
+  
+  .godlike-button {
+    background-color: #ff6f00;
+    color: #fff;
+    font-size: 24px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .godlike-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+    background-image: radial-gradient(circle, #ffbe00, #ff6f00);
+    opacity: 0.8;
+    transform: rotate(45deg);
+    animation: flame 2s infinite alternate;
+  }
+  
+  @keyframes flame {
+    0% {
+      transform: rotate(45deg) scale(1);
+    }
+    100% {
+      transform: rotate(45deg) scale(1.5);
+    }
+  }
+  
+  .godlike-button:hover {
+    transform: scale(1.1);
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+  }

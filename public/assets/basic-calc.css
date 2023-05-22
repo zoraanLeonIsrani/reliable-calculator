@@ -1,0 +1,31 @@
+.container {
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .options {
+    margin-top: 30px;
+  }
+  
+  .option {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4287f5;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  
+  .other-option {
+    background-color: green;
+  }
+  
+  .other-option:hover {
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Calculator Page</title>
+  <link rel="stylesheet" type="text/css" href="/public/assets/basic-calc.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculator</h1>
+    <div class="options">
+      <a href="https://youtu.be/dQw4w9WgXcQ" class="option">Subtraction Calculator</a>
+      <a href="#" class="option other-option">Other</a>
+    </div>
+  </div>
+  <script>
+    const otherOption = document.querySelector('.other-option');
+
+    otherOption.addEventListener('click', function(event) {
+    event.preventDefault();
+    alert("No.");
+    });
+  </script>
+</body>
+</html>

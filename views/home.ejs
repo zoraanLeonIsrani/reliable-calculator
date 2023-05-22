@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Calculator App</title>
+  <link rel="stylesheet" type="text/css" href="/public/assets/home.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Calculator App!</h1>
+    <div class="buttons">
+      <a href="#" class="basic-button">Basic Calculator</a>
+      <a href="#" class="advanced-button">Advanced Calculator</a>
+      <a href="#" class="godlike-button">God-like Calculator</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Zoraan Leon Israni. All rights reserved.
+  </footer>
+
+  <script>
+    // Get the elements for the buttons
+    const basicButton = document.querySelector('.basic-button');
+    const advancedButton = document.querySelector('.advanced-button');
+    const godlikeButton = document.querySelector('.godlike-button');
+
+    // Add click event listeners
+    basicButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      const confirmation = confirm("You do seem like a basic person ha ha");
+      if (confirmation) {
+        window.location.href = '/basic-calc';
+      }
+    });
+
+    advancedButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      alert("Sorry broke boys cant access this, send me a fiver. ");
+    });
+
+    godlikeButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      let popupIndex = 0;
+
+      function displayNextPopup() {
+        const popups = [
+          "Do you really think people like you are given god like work?",
+          "Light travels faster than sound, which is why you seemed bright until you clicked this option. So is that a yes on the godlike?",
+          "We don't think you deserve it, all you can get is basic. Deal with it."
+        ];
+
+        if (popupIndex < popups.length) {
+          const confirmation = confirm(popups[popupIndex]);
+          if (confirmation) {
+            popupIndex++;
+            displayNextPopup();
+          }
+        } else {
+          window.location.href = '/basic-calc';
+        }
+      }
+
+      displayNextPopup();
+    });
+  </script>
+</body>
+</html>
